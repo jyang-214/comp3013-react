@@ -18,8 +18,6 @@ function App() {
       {profiles.map((profile) => (
         <Profile name={profile.name} url={profile.url} />
       ))}
-      {/* Profile name={profiles[0].name} url={profiles[0].url} />
-      <Profile name={profiles[1].name} url={profiles[1].url} /> */}
     </>
   );
 }
