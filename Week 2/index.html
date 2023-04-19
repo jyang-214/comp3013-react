@@ -14,13 +14,16 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <script type="text/babel">
-
+        let counter = 0;
+        function countUp() {
+            counter++;
+        }
       function App() {
           return (
-            //<React.Fragment></React.Fragment>
+                    //<React.Fragment></React.Fragment>
             <> 
             <h3>Total Clicks: 0</h3>
-            <button>Increase</button>
+            <button onClick={countUp}>Increase</button>
             </>
         )
       }
