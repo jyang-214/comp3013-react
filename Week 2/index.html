@@ -15,9 +15,9 @@
 
     <script type="text/babel">
       let counter = 0;
-      const countUp = () => {
-        counter++;
-      }
+    //   const countUp = () => {
+    //     counter++;
+    //   }
     //   function countUp() {
     //     counter++;
     //   }
@@ -26,7 +26,7 @@
           //<React.Fragment></React.Fragment>
           <>
             <h3>Total Clicks: {counter}</h3>
-            <button onClick={countUp}>Increase</button>
+            <button onClick={() => { counter++}}>Increase</button>
           </>
         );
       }
