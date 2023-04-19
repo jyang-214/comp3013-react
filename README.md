@@ -4,3 +4,6 @@ BCIT Summer 2023 COMP 3013 React.js coursework
 # Week 1
 Went through the differences between vanilla JavaScript and React.js library.
 How React.js will greatly improve performance and usability over vanilla JavaScript.
+
+# Week 2
+Starting to apply React in code.
