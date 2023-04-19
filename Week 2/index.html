@@ -14,23 +14,23 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <script type="text/babel">
-        let counter = 0;
-        function countUp() {
-            counter++;
-        }
+      let counter = 0;
+      function countUp() {
+        counter++;
+      }
       function App() {
-          return (
-                    //<React.Fragment></React.Fragment>
-            <> 
-            <h3>Total Clicks: 0</h3>
+        return (
+          //<React.Fragment></React.Fragment>
+          <>
+            <h3>Total Clicks: {counter}</h3>
             <button onClick={countUp}>Increase</button>
-            </>
-        )
+          </>
+        );
       }
 
       const root = document.getElementById("root");
-      ReactDOM.render(<App/>, root);  // where do you want your application to be drawn? in thish case it is the "root".
-                                      // takes whatever in App into root.
+      ReactDOM.render(<App />, root); // where do you want your application to be drawn? in thish case it is the "root".
+      // takes whatever in App into root.
     </script>
   </body>
 </html>
