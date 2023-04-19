@@ -14,7 +14,7 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <script type="text/babel">
-      let counter = 0;
+    //   let counter = 0;
     //   const countUp = () => {
     //     counter++;
     //   }
@@ -22,11 +22,12 @@
     //     counter++;
     //   }
       function App() {
+        let [counter, setCounter] = React.useState(0);
         return (
           //<React.Fragment></React.Fragment>
           <>
             <h3>Total Clicks: {counter}</h3>
-            <button onClick={() => { counter++}}>Increase</button>
+            <button onClick={() => { counter++ }}>Increase</button>
           </>
         );
       }
