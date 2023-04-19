@@ -11,13 +11,15 @@ function App() {
     { name: "Sandra", url: "https://i.imgur.com/MK3eW3Am.jpg" },
     { name: "James", url: "https://i.imgur.com/7vQD0fPs.jpg" },
   ];
+
   return (
     <>
       <h1>My Website</h1>
-      <Profile
-        name="Dog"
-        url="https://i.imgur.com/fdDJ5j3_d.webp?maxwidth=520&shape=thumb&fidelity=high"
-      />
+      {profiles.map((profile) => (
+        <Profile name={profile.name} url={profile.url} />
+      ))}
+      {/* Profile name={profiles[0].name} url={profiles[0].url} />
+      <Profile name={profiles[1].name} url={profiles[1].url} /> */}
     </>
   );
 }
