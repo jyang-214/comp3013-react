@@ -5,4 +5,8 @@ function App() {
   return <hi>Hi</hi>
 }
 
-export default App
+function Movies() {
+
+}
+
+export { App, Movies }  // Nmaed Export
