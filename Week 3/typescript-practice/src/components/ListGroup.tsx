@@ -2,7 +2,7 @@ import React from "react";
 import ListItem from "./ListItem";
 const cities = ["Vancouver", "London", "Paris", "Tokyo"];
 
-export default function ListGroup() {
+function ListGroup() {
   return (
     <>
       {cities.map((c) => (
@@ -11,3 +11,5 @@ export default function ListGroup() {
     </>
   );
 }
+
+export default ListGroup;
