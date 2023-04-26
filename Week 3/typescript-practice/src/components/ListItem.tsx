@@ -5,7 +5,7 @@ interface Props {
 }
 
 function ListItem({ city }: Props) {
-  return <li>{city}</li>;
+  return <li className="list-group-item">{city}</li>;
 }
 
 export default ListItem;
