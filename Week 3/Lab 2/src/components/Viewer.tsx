@@ -9,8 +9,7 @@ function Viewer(props: Props) {
 		return (
 			<>
 				<h3>Selected Cities:</h3>
-
-				<p>No items have been selected.</p>
+				<p>There are no cities selected.</p>
 			</>
 		);
 	}

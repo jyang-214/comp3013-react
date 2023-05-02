@@ -9,7 +9,6 @@ interface Props {
 }
 
 function ListGroup(props: Props) {
-	// const cities: string[] = ["Vancouver", "Paris", "London"];
 	const { cities, onSelectedCity } = props;
 	const [selectedIndex, setSelectedIndex] = useState(-1);
 
