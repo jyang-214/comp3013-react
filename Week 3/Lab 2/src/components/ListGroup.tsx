@@ -1,39 +1,46 @@
+/** @format */
+
 import { useState } from "react";
 import ListItem from "./ListItem";
 
 interface Props {
-  cities: string[];
-  setSelectedIndex: () => void;
+	cities: string[];
+	onSelectedCity: (city: string) => void;
 }
 
-function ListGroup() {
-  const cities: string[] = ["Vancouver", "Paris", "London"];
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+function ListGroup(props: Props) {
+	// const cities: string[] = ["Vancouver", "Paris", "London"];
+	const { cities, onSelectedCity } = props;
+	const [selectedIndex, setSelectedIndex] = useState(-1);
 
-  const handleClick = (index: number) => {
-    setSelectedIndex(index);
-  };
+	const handleClick = (city: string, index: number) => {
+		setSelectedIndex(index);
+		onSelectedCity(city);
+	};
 
-  if (cities.length === 0) {
-    return <h3>No cities to select!</h3>;
-  }
+	if (cities.length === 0) {
+		return <h3>No cities to select!</h3>;
+	}
 
-  return (
-    <ul className="list-group">
-      {cities.map((city, index) => (
-        <li
-          onClick={() => handleClick(index)}
-          className={
-            selectedIndex === index
-              ? "list-group-item active"
-              : "list-group-item"
-          }
-        >
-          {city}
-        </li>
-      ))}
-    </ul>
-  );
+	return (
+		<>
+			<h3>List of Cities:</h3>
+			<ul className="list-group">
+				{cities.map((city, index) => (
+					<li
+						onClick={() => handleClick(city, index)}
+						className={
+							selectedIndex === index
+								? "list-group-item active"
+								: "list-group-item"
+						}
+					>
+						{city}
+					</li>
+				))}
+			</ul>
+		</>
+	);
 }
 
 export default ListGroup;
