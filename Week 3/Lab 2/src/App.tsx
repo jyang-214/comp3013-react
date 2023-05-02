@@ -9,7 +9,7 @@ function App() {
 	const [selectedCities, setSelectedCities] = useState<string[]>([]);
 
 	const handleSelectCity = (city: string) => {
-		setSelectedCities(() => [city]);
+		setSelectedCities([city]);
 	};
 	return (
 		<>
