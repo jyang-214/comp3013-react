@@ -10,7 +10,6 @@ interface Props {
 function ListItem({ book, currentBookIndex, setCurrentBookIndex }: Props) {
 	const handleClick = () => {
 		setCurrentBookIndex(book.id);
-		console.log(book.id);
 	};
 
 	return (
